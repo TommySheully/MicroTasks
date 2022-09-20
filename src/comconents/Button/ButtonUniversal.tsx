@@ -25,6 +25,7 @@ type NameType = {
 
 export const ButtonUniversal = (props: NameType) => {
     const OnClickHandler = () => {props.callBack()};
+
     return (
     <div>
         <button onClick={OnClickHandler}>{props.name}</button>
