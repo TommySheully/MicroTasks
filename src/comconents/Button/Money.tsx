@@ -11,7 +11,6 @@ type money = {
     money: Array<MoneyArrType>
 };
 
-
 type FilterType = "All" | "RUBLS" | "Dollars";
 
 export const MoneyApp = (props: money) => {
@@ -20,11 +19,11 @@ export const MoneyApp = (props: money) => {
     let currentMoney = props.money;
 
 
-        if (filters==='RUBLS') {
-            currentMoney = props.money.filter((filterMoney) => filterMoney.banknots === "RUBLS");
-        }
-        if (filters==='Dollars') {
-            currentMoney = props.money.filter((filterMoney)=>filterMoney.banknots === "Dollars");
+    if (filters === 'RUBLS') {
+        currentMoney = props.money.filter((filterMoney) => filterMoney.banknots === "RUBLS");
+    }
+    if (filters === 'Dollars') {
+        currentMoney = props.money.filter((filterMoney) => filterMoney.banknots === "Dollars");
     }
 
     let filtersHandler = (nameButton: FilterType) => {
